@@ -6,16 +6,6 @@
     <title>Appointment Scheduler</title>
 </head>
 <body>
-
-
-<?php 
-
-require_once(__DIR__ . '/../env.php');
-
-echo getenv('DB_USERNAME');
-echo $_ENV['DB_PASSWORD'];
-
-?>
-
+    Main layout
 </body>
 </html>
