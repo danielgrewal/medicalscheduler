@@ -16,7 +16,7 @@ class UserRepository
     {
         $sql = "SELECT * FROM Users where email = ? and password = ?";
         $params = [$username, $password];
-        $result = $this->db->execute($sql, $params);
+        $result = $this->db->run($sql, $params);
         
         return $result->fetchAll(PDO::FETCH_CLASS, 'User');
     }

@@ -31,7 +31,7 @@ class Database
         }
     }
 
-    public function execute(string $sql_statement, array $params=[])
+    public function run(string $sql_statement, array $params=[])
     {
         try 
         {
