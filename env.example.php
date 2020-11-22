@@ -1,5 +1,5 @@
 <?php 
-
+# Rename file to env.php and replace the settings array values with the relevant environment info
 $settings = [
     'DB_HOST'     => 'localhostorserver',
     'DB_USERNAME' => 'mysupersecretusername',

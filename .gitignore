@@ -13,8 +13,6 @@ env.local.php
 env.test.php
 env.prod.php
 
-
-
 # logs
 npm-debug.log*
 yarn-debug.log*
