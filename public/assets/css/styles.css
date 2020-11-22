@@ -1,0 +1,17 @@
+/* Final Project CSS for all pages */
+body {
+	background-color: powderblue;
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight: bold;
+}
+/* This will align the input fields and make the registration form look better */
+.formbox {
+  	width: 250px;
+  	clear: both;
+}
+
+.formbox input {
+	width: 100%;
+	clear: both;
+}
