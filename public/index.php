@@ -15,15 +15,10 @@ AuthenticationService::authenticate();
 </head>
 <body>
     <h1>Landing/Home Page</h1>
-    <button id="sign-out" type="button" class="btn btn-primary">Signout</button>
-
+    <a href="logout.php" class="btn btn-primary">Sign out</a>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        $('#sign-out').click(function(e) {
-            e.preventDefault();
-            window.location.href = 'logout.php';
-        });
-    </script>
+
 </body>
 </html>

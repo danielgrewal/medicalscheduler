@@ -38,9 +38,26 @@ class AuthenticationService
         return $user;
     }
 
-    public function registerUser()
+    public function registerUser($firstName, $lastName, $email, $password, $password2)
     {
+        $this->checkValidName($firstName, $lastName);
+        $this->checkEmailProvided($email);
+        $this->checkPasswordProvided($password);
+        $this->checkPasswordMatch($password, $password2);
 
+        if (!empty($this->errors))
+            return null;
+
+        $this->userRepository = new UserRepository();
+        
+        if ($this->userRepository->getUserByEmail($email))
+        {
+            $this->addError("email", "This email address is already in use.");
+            return null;
+        }
+
+        $user = $this->userRepository->createUser($firstName, $lastName, $email, $password);
+        return $user;
     }
 
     public function getErrors()
@@ -78,6 +95,30 @@ class AuthenticationService
         {
             $this->addError("password", "Password cannot be empty.");
         }
+    }
+
+    private function checkPasswordMatch($password, $password2)
+    {
+        if (!$password == $password2)
+        {
+            $this->addError("form", "Passwords must match.");
+        }
+    }
+
+    private function checkValidName($firstName, $lastName)
+    {
+        $fname = trim($firstName);
+        $lname = trim($lastName);
+
+        if (empty($fname))
+            $this->addError("firstName", "First name must be provided.");
+        else if (!preg_match("/^[a-zA-Z'-]+$/", $fname))
+            $this->addError("firstName", "You have not provided a valid first name");
+        
+        if (empty($lname))
+            $this->addError("lastName", "Last name must be provided.");
+        else if (!preg_match("/^[a-zA-Z'-]+$/", $lname))
+            $this->addError("firstName", "You have not provided a valid last name");
     }
 
     private function addError($key, $val)

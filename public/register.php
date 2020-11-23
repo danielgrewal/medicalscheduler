@@ -13,9 +13,10 @@
 		<form action="validate.php" method="POST">
 			<fieldset>
 				<!-- we can add radio buttons for if patient is male/female, or if a senior or a child etc.-->
-				Username: <input type="text" name="username"><br>
+				First Name: <input type="text" name="firstname" autocomplete="off"><br>
+				Last Name: <input type="text" name="lastname" autocomplete="off"><br>
 				<!-- use input type="email" once HTML5 check is done, ask Usman-->
-			    Email: <input type="text" name="email"><br>
+			    Email: <input type="text" name="email" autocomplete="off"><br>
 			    Password: <input type="password" name="password"><br>
 			    Confirm Password: <input type="password" name="passwordconfirm"><br><br>
 			    <input type="submit" value="Register">

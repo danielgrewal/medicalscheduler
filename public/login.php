@@ -9,8 +9,8 @@ if ($_POST)
     $user = $authService->getUser($_POST['email'], $_POST['password']);
     if ($user)
     {
-        $authService->populateSession($user[0]);
-        header( "Location: index.php", false, 303 );
+        $authService->populateSession($user);
+        header( "Location: index.php", false, 303);
         exit();
     }
     else

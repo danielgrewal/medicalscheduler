@@ -45,11 +45,16 @@ class Database
         }
     }
 
+    public function getLastInsertedId()
+    {
+        return $this->PDO->lastInsertId();
+    }
+
     public function __destruct()
     {
         # Disconnect from db
         $this->PDO = null;
-        // echo 'Successfully disconnected from the database!';
+        //echo 'Successfully disconnected from the database!';
     }
 }
 
