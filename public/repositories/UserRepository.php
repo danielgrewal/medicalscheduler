@@ -12,10 +12,10 @@ class UserRepository
         $this->db = new Database();
     }
 
-    public function getUserByUsernameAndPassword(string $username, string $password)
+    public function getUserByEmailAndPassword(string $email, string $password)
     {
         $sql = "SELECT * FROM Users where email = ? and password = ?";
-        $params = [$username, $password];
+        $params = [$email, $password];
         $result = $this->db->run($sql, $params);
         
         return $result->fetchAll(PDO::FETCH_CLASS, 'User');
