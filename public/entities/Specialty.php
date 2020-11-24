@@ -6,6 +6,7 @@ class Specialty
 {
     public $SpecialtyId;
     public $Name;
+    public $Description;
 }
 
 ?>

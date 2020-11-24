@@ -47,9 +47,5 @@ CREATE TABLE Appointments (
     FOREIGN KEY (DoctorId) REFERENCES Doctors(DoctorId),
     FOREIGN KEY (DateId) REFERENCES Dates(DateId),
     FOREIGN KEY (TimeslotId) REFERENCES Timeslots(TimeslotId),
-    UNIQUE INDEX idx_UserId_DoctorId_DateId_TimeslotId (DoctorId, DateId, TimeslotId)
+    UNIQUE INDEX idx_DoctorId_DateId_TimeslotId (DoctorId, DateId, TimeslotId)
 );
-
-
-
-
