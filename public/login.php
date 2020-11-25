@@ -33,33 +33,7 @@ if ($_POST)
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .login-form {
-            width: 340px;
-            margin: 50px auto;
-            font-size: 15px;
-        }
-        .login-form form {
-            margin-bottom: 15px;
-            background: #f7f7f7;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-        }
-        .login-form h2 {
-            margin: 0 0 15px;
-        }
-        .form-control, .btn {
-            min-height: 38px;
-            border-radius: 2px;
-        }
-        .btn {        
-            font-size: 15px;
-            font-weight: bold;
-        }
-        body {
-            background-color: lightblue;
-        }
-</style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <div class="login-form">
@@ -68,7 +42,7 @@ if ($_POST)
             <p>Please sign in to continue.</p>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" type="text" class="form-control" name="email" autocomplete="off" required>
+                <input id="email" type="email" class="form-control" name="email" autocomplete="off" required>
                 <?php echo isset($errors['email']) ? $errors['email'] : null ?> 
             </div>
             <div class="form-group">
