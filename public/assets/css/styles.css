@@ -1,4 +1,3 @@
-/* Final Project CSS for all pages */
 body {
 	background-color: lightblue;
 }
@@ -23,15 +22,4 @@ body {
 .btn {        
     font-size: 15px;
     font-weight: bold;
-}
-
-/* This will align the input fields and make the registration form look better */
-.formbox {
-  	width: 250px;
-  	clear: both;
-}
-
-.formbox input {
-	width: 100%;
-	clear: both;
 }
