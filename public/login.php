@@ -31,29 +31,36 @@ if ($_POST)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Login Page</h1>
-    <form id="login-form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
-        <div>
-            <label for="email">Email Address:</label>
-            <input id="email" type="text" name="email" autocomplete="off">
-            <?php echo isset($errors['email']) ? $errors['email'] : null ?>
-            
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password">
-            <?php echo isset($errors['password']) ? $errors['password'] : null ?>
-        </div>
-        <input type="submit" value="Sign in">
-        <?php echo isset($errors['form']) ? $errors['form'] : null ?>
-    </form>
+    <div id="navigation">
+        <script>
+        $(function() {
+            $("#navigation").load("assets/navbar.html");
+        });
+        </script>
+    </div>
+    <div class="login-form">
+        <form id="login-form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+            <h2 class="text-center">Welcome!</h2>
+            <p>Please sign in to continue. If you have not already registered, <a href="register.php">click here</a>.</p>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" class="form-control" name="email" autocomplete="off" required>
+                <?php echo isset($errors['email']) ? $errors['email'] : null ?> 
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" required>
+                <?php echo isset($errors['password']) ? $errors['password'] : null ?>
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Login">
+            <?php echo isset($errors['form']) ? $errors['form'] : null ?>
+        </form>
+    </div>
 </body>
 </html>
-
-<style type="text/css">
-    label {
-        display: block;
-    }
-</style>

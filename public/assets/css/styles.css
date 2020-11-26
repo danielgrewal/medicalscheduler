@@ -1,17 +1,33 @@
-/* Final Project CSS for all pages */
 body {
-	background-color: powderblue;
-	font-family: Verdana;
-	font-size: 10pt;
-	font-weight: bold;
+	background-color: aliceblue;
 }
-/* This will align the input fields and make the registration form look better */
-.formbox {
-  	width: 250px;
-  	clear: both;
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+    font-size: 15px;
 }
-
-.formbox input {
-	width: 100%;
-	clear: both;
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+.jumbotron {
+    background-image: url("banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 290px;
+    color: aliceblue;
 }
