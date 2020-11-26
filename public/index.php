@@ -17,7 +17,13 @@
 		});
 		</script>
 	</div>
-	<h1>THIS IS THE FRIKKIN LANDING PAGE</h1>
+	<header class="jumbotron">
+    <div class="container-fluid text-center"> 
+       <h1 class="display-3"><strong>Your Health and Well-Being Matters!</strong></h1>
+       <p class="lead pb-4"><strong>We are committed to providing the best health care for you and your family.</strong></p>
+       <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn More</a></p>
+    </div>
+	</header>
 	
 
 </body>

@@ -23,3 +23,7 @@ body {
     font-size: 15px;
     font-weight: bold;
 }
+.jumbotron {
+    background-image: url("banner.jpg");
+    color: aliceblue;
+}
