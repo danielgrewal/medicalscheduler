@@ -7,25 +7,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-info">
-        <a href="#" class="navbar-brand">Medical Appointment Scheduler</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse5">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse5">
-            <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link active">Login</a>
-                <a href="#" class="nav-item nav-link">Register</a>
-                <a href="#" class="nav-item nav-link">About</a>
-            </div>
-            <form class="form-inline ml-auto">
-                <input type="text" class="form-control mr-sm-2" placeholder="Search">
-                <button type="submit" class="btn btn-outline-light">Search</button>
-            </form>
-        </div>
+	<div id="navigation">
+		<script>
+		$(function() {
+			$("#navigation").load("assets/navbar.html");
+		});
+		</script>
+	</div>
     </nav>
 	<div class="login-form">
 		<form id="login-form" action="validate.php" method="POST">
@@ -51,7 +42,7 @@
 				<label for="passwordconfirm">Confirm Password</label>
 			    <input type="password" class="form-control" name="passwordconfirm" required>
 			</div>    	
-			<input type="submit" class="btn btn-primary btn-block" value="Register now">
+			<input type="submit" class="btn btn-primary btn-block" value="Register">
 	    </form>
 	</div>
 </body>
