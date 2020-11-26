@@ -34,7 +34,7 @@
                <p class="card-text">Our doctors and health care professionals pride themselves in providing the best care. All of our staff and medical personnel are highly qualified and experienced.</p>
             </div>
             <div class="card-footer py-4">
-               <a href="#" class="btn btn-primary btn-block">See Doctors &raquo;</a>
+               <a href="" class="btn btn-primary btn-block">See Doctors &raquo;</a>
             </div>
          </div>
       </div>
@@ -47,7 +47,7 @@
                   <p class="card-text">We are accepting patients for all of our doctors. If you have not already registered, please follow the link below. If you are an existing patient, click here to login.</p>
             </div>
             <div class="card-footer py-4">
-               <a href="#" class="btn btn-primary btn-block">Register Now! &raquo;</a>
+               <a href="register.php" class="btn btn-primary btn-block">Register Now! &raquo;</a>
             </div>
          </div>
       </div>
@@ -60,7 +60,7 @@
                <p class="card-text">Do you need to reschedule or cancel an appointment? Registered patients can easily manage their appointments using our website.</p>
             </div>
             <div class="card-footer py-4">
-               <a href="#" class="btn btn-primary btn-block">Login Here &raquo;</a>
+               <a href="login.php" class="btn btn-primary btn-block">Login Here &raquo;</a>
             </div>
          </div>
       </div>
