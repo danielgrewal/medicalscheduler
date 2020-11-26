@@ -25,5 +25,9 @@ body {
 }
 .jumbotron {
     background-image: url("banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 290px;
     color: aliceblue;
 }
