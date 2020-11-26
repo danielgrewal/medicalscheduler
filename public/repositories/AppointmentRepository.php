@@ -1,9 +1,9 @@
 <?php
 
 require_once(__DIR__ . '/../data/Database.php');
-require_once(__DIR__ . '/../entities/Appoinment.php');
-require_once(__DIR__ . '/../entities/Doctor.php');
-require_once(__DIR__ . '/../entities/User.php');
+// require_once(__DIR__ . '/../entities/Appoinment.php');
+// require_once(__DIR__ . '/../entities/Doctor.php');
+// require_once(__DIR__ . '/../entities/User.php');
 
 class AppointmentRepository
 {

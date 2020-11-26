@@ -1,6 +1,7 @@
 <?php 
 
 require_once(__DIR__ . '/../repositories/UserRepository.php');
+require_once(__DIR__ . '/../entities/User.php');
 
 class AuthenticationService 
 {
@@ -13,6 +14,15 @@ class AuthenticationService
         {
             header( "Location: login.php", false, 303);
             exit();
+        } 
+        else 
+        {
+            $user = new User();
+            $user->UserId = $_SESSION['UserId'];
+            $user->Email = $_SESSION['Email'];
+            $user->FirstName = $_SESSION['FirstName'];
+            $user->LastName = $_SESSION['LastName'];
+            return $user;
         }
 
         //TODO: implement session expiry after 30 min
@@ -70,7 +80,7 @@ class AuthenticationService
         $_SESSION['UserId'] = $user->UserId;
         $_SESSION['Email'] = $user->Email;
         $_SESSION['FirstName'] = $user->FirstName;
-        $_SESSION['Password'] = $user->Password;
+        $_SESSION['LastName'] = $user->LastName;
         $_SESSION['SessionStart'] = time();
         $_SESSION['SessionExpire'] = $_SESSION['SessionStart'] + 1800;
     }

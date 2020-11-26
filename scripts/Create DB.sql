@@ -20,7 +20,7 @@ CREATE TABLE Dates (
 
 CREATE TABLE Timeslots (
 	TimeslotId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Display VARCHAR(5) NOT NULL,
+    Display VARCHAR(7) NOT NULL,
     StartTime TIME NOT NULL,
     INDEX idx_StartTime(StartTime)
 );
@@ -50,3 +50,22 @@ CREATE TABLE Appointments (
     FOREIGN KEY (TimeslotId) REFERENCES Timeslots(TimeslotId),
     UNIQUE INDEX idx_DoctorId_DateId_TimeslotId (DoctorId, DateId, TimeslotId)
 );
+
+insert into Timeslots values (null, '8:00am', '08:00:00');
+insert into Timeslots values (null, '8:30am', '08:30:00');
+insert into Timeslots values (null, '9:00am', '09:00:00');
+insert into Timeslots values (null, '9:30am', '09:30:00');
+insert into Timeslots values (null, '10:00am', '10:00:00');
+insert into Timeslots values (null, '10:30am', '10:30:00');
+insert into Timeslots values (null, '11:00am', '11:00:00');
+insert into Timeslots values (null, '11:30am', '11:30:00');
+insert into Timeslots values (null, '12:00pm', '12:00:00');
+insert into Timeslots values (null, '12:30pm', '12:30:00');
+insert into Timeslots values (null, '1:00pm', '13:00:00');
+insert into Timeslots values (null, '1:30pm', '13:30:00');
+insert into Timeslots values (null, '2:00pm', '14:00:00');
+insert into Timeslots values (null, '2:30pm', '14:30:00');
+insert into Timeslots values (null, '3:00pm', '15:00:00');
+insert into Timeslots values (null, '3:30pm', '15:30:00');
+insert into Timeslots values (null, '4:00pm', '16:00:00');
+insert into Timeslots values (null, '4:30pm', '16:30:00');
