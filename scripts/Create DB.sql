@@ -21,7 +21,8 @@ CREATE TABLE Dates (
 CREATE TABLE Timeslots (
 	TimeslotId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Display VARCHAR(5) NOT NULL,
-    StartTime TIME NOT NULL
+    StartTime TIME NOT NULL,
+    INDEX idx_StartTime(StartTime)
 );
 
 CREATE TABLE Specialties (

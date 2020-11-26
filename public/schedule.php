@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+$monday = date( 'Y-m-d', strtotime( 'monday this week' ) );
+$friday = date( 'Y-m-d', strtotime( 'friday this week' ) );
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +13,10 @@
     <title>Schedule</title>
 </head>
 <body>
-    
+<?php 
+echo $monday;
+echo $friday;
+
+?>
 </body>
 </html>

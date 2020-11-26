@@ -20,7 +20,6 @@ class UserRepository
         
         $userArray = $result->fetchAll(PDO::FETCH_CLASS, 'User');
         return !empty($userArray) ? $userArray[0] : NULL;
-
     }
 
     public function getUserByEmail($email)

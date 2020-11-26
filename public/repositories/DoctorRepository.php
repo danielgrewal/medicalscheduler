@@ -5,23 +5,33 @@ require_once(__DIR__ . '/../entities/Doctor.php');
 
 class DoctorRepository
 {
-    private static $instance = null;
     private $db;
 
-    private function __construct()
+    public function __construct()
     {
         $this->db = new Database();
     }
 
-    public static function getInstance()
+    public function getDoctorByDoctorId($id)
     {
-        if (self::$instance == null)
-        {
-            self::$instance = new DoctorRepository();
-        }
-    
-        return self::$instance;
+        $sql = "SELECT * FROM Doctors where DoctorId = ?";
+        $params = [$id];
+        $result = $this->db->run($sql, $params);
+        
+        $doctorArray = $result->fetchAll(PDO::FETCH_CLASS, 'Doctor');
+        return !empty($DoctorArray) ? $doctorArray[0] : NULL;
     }
+
+    public function getDoctorsBySpecialtyId($id)
+    {
+        $sql = "SELECT * FROM Doctors where SpecialtyId = ?";
+        $params = [$id];
+        $result = $this->db->run($sql, $params);
+        
+        $doctorArray = $result->fetchAll(PDO::FETCH_CLASS, 'Doctor');
+        return !empty($DoctorArray) ? $doctorArray : NULL;
+    }
+
 }
 
 
