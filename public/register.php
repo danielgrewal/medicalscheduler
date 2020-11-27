@@ -27,7 +27,7 @@
 	</div>
 
 	<div class="login-form">
-		<form id="login-form" action="profiles.php" method="POST">
+		<form id="login-form" action="schedule.php" method="POST">
 			<h2 class="text-center">Welcome!</h2>
 			<p>You must register before booking an appointment. If you have already registered, <a href="login.php">click here</a> to login.</p>
 			<div class="form-group">
