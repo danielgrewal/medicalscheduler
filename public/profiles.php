@@ -16,9 +16,16 @@
   <a href="profiles.php" class="active">Our Doctors</a>
   <a href="schedule.php">View Appointments</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+    <i class="fa fa-bars"></i></a>
 </div>
+  	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1><strong>Providing <u>quality</u> care is our <u>main</u> concern.</strong></h1>
+			<p>We have only the best doctors and medical professionals at our clinics.</p>
+		</div>
+	</div>
+
+
 
 	<h1>PUT DOCTOR INFO HERE AND BLAH BLAH </h1>
 

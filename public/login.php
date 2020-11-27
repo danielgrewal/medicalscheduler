@@ -48,8 +48,8 @@ if ($_POST)
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1><strong>We are always here to care for you.</strong></h1>
-            <p>24/7 Online access for patients that register. Easily book and manage your appointments after signing in.</p>
+            <h1><strong>We are <u>always</u> here to care for <u>you</u>.</strong></h1>
+            <p>Easily book and manage your appointments after signing in.</p>
         </div>
     </div>
 
