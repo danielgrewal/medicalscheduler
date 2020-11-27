@@ -22,6 +22,7 @@ $doctor = new Doctor();
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
     <!-- Top Nav -->
     <div class="topnav" id="myTopnav">
         <a href="index.php">Home</a>
@@ -112,5 +113,6 @@ $doctor = new Doctor();
         // });
         
     </script>
+>>>>>>> 96053af5b6e81cf71345b5412211d6f3ab193cde
 </body>
 </html>
