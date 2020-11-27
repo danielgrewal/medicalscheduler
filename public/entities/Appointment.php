@@ -6,7 +6,7 @@ class Appointment
 {
     public $AppointmentId;
     public $DoctorId;
-    public $DateId;
+    public $FullDate;
     public $TimeslotId;
     public $UserId;
 }
