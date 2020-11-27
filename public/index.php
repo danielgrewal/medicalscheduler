@@ -10,21 +10,27 @@
 </head>
 <body>
 	<div class="topnav" id="myTopnav">
-  <a href="index.php" class="active">Home</a>
-  <a href="login.php">Sign in</a>
-  <a href="register.php">Register</a>
-  <a href="profiles.php">Our Doctors</a>
-  <a href="schedule.php">View Appointments</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+  		<a href="index.php" class="active">Home</a>
+	  	<a href="login.php">Sign in</a>
+	  	<a href="register.php">Register</a>
+	  	<a href="profiles.php">Our Doctors</a>
+	  	<a href="schedule.php">View Appointments</a>
+	  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    	<i class="fa fa-bars"></i></a>
+	</div>
+	<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1><strong>Your Health and Well-Being Matters.</strong></h1>
+    <p>We are committed to providing the best health care for you and your family.</p>
+  </div>
 </div>
+<!--
 	<header class="jumbotron">
     <div class="container-fluid text-center"> 
        <h1 class="display-3"><strong>Your Health and Well-Being Matters.</strong></h1>
        <p class="lead pb-4"><strong>We are committed to providing the best health care for you and your family.</strong></p>
     </div>
-	</header>
+	</header>-->
 <section id="services" class="container">
    <h2 class="display-4 text-center mt-5 mb-3"></h2>
    <div class="row text-center">

@@ -1,5 +1,8 @@
 body {
-	background-color: #EFF6FF;
+	background-color: #E0E7FF;
+}
+h1, p {
+    text-align: center;
 }
 .login-form {
     width: 340px;
@@ -25,14 +28,17 @@ body {
 }
 .jumbotron {
     background-image: url("banner.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     position: relative;
-    height: 340px;
+    height: 240px;
+    background-color: #E0E7FF;
 }
 
 .topnav {
-  background-color: #333;
+  background-color: #312E81;
   overflow: hidden;
 }
 
@@ -43,16 +49,16 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #EEF2FF;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #1E40AF;
+  background-color: #6366F1;
   color: white;
 }
 
