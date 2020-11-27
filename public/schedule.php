@@ -6,7 +6,8 @@ require_once(__DIR__ . '/services/AppointmentService.php');
 $user = AuthenticationService::authenticate();
 
 $appointmentService = new AppointmentService();
-$dates = $appointmentService->getDaysInWeekByDate(date('Y-m-d'));
+$dates = $appointmentService->getDaysInWeekByDate('2020-11-28');
+
 
 ?>
 
@@ -36,10 +37,10 @@ $dates = $appointmentService->getDaysInWeekByDate(date('Y-m-d'));
 
     <!-- Main Container -->
     <div class="container">
-        <h1>HERE IS WHERE THE SCHEDULE WILL BE ETC ETC</h1>
+        <h1 class="display-4">Appointment Booking</h1>
         
         <!-- Appointments Card -->
-        <div class="card text-center">
+        <div class="card text-center mt-5">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">

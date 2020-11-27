@@ -17,8 +17,10 @@ class AppointmentRepository
     public function getAppointmentByAppointmentId($id)
     {}
 
-    public function getAppointmentsByDate($date)
-    {}
+    public function getAppointmentsByDate($date, $doctorId = null)
+    {
+        $sql = "";
+    }
 
     public function getAppointmentsByUserId($UserId)
     {}

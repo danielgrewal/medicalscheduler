@@ -41,14 +41,13 @@ CREATE TABLE Doctors (
 CREATE TABLE Appointments (
 	AppointmentId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     DoctorId INT NOT NULL,
-    DateId INT NOT NULL,
+    FullDate Date NOT NULL,
     TimeslotId INT NOT NULL,
     UserId INT NOT NULL,
     FOREIGN KEY (UserId) REFERENCES Users(UserId),
     FOREIGN KEY (DoctorId) REFERENCES Doctors(DoctorId),
-    FOREIGN KEY (DateId) REFERENCES Dates(DateId),
     FOREIGN KEY (TimeslotId) REFERENCES Timeslots(TimeslotId),
-    UNIQUE INDEX idx_DoctorId_DateId_TimeslotId (DoctorId, DateId, TimeslotId)
+    UNIQUE INDEX idx_DoctorId_FullDate_TimeslotId (DoctorId, FullDate, TimeslotId)
 );
 
 insert into Timeslots values (null, '8:00am', '08:00:00');
@@ -69,3 +68,17 @@ insert into Timeslots values (null, '3:00pm', '15:00:00');
 insert into Timeslots values (null, '3:30pm', '15:30:00');
 insert into Timeslots values (null, '4:00pm', '16:00:00');
 insert into Timeslots values (null, '4:30pm', '16:30:00');
+
+insert into specialties values (null, 'Diagnostic Medicine', 'Placeholder Diagnostic Medicine description');
+insert into specialties values (null, 'Family Medicine', 'Placeholder Family Medicine description');
+insert into specialties values (null, 'Psychiatric Medicine', 'Placeholder Psychiatric Medicine description');
+
+insert into doctors values (null, 'Dr.Gregory House', 1);
+insert into doctors values (null, 'Dr.Perry Cox', 2);
+insert into doctors values (null, 'Dr.John J.D. Dorian', 2);
+insert into doctors values (null, 'Dr.Frasier Crane', 3);
+insert into doctors values (null, 'Dr.Niles Crane', 3);
+
+#insert into appointments values (null, 3, '2020-11-27', 15, 1);
+#insert into appointments values (null, 3, '2020-11-27', 11, 2);
+#insert into appointments values (null, 1, '2020-11-27', 11, 2);
