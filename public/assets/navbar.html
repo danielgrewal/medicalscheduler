@@ -1,46 +1,15 @@
-<!--<nav class="navbar navbar-expand-lg navbar-mainbg">
-	<a class="navbar-brand navbar-logo" href="index.php"><strong>Medical Appointment Scheduler</strong></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	<i class="fas fa-bars text-white"></i>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="login.php">Login</a>
-			</li>
-			<li class="nav-item active">
-				<a class="nav-link" href="register.php">Register</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">Doctor Profiles</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">Appointments</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">Contact</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">About</a>
-			</li>
-		</ul>
-	</div>
-</nav>-->
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a href="index.php" class="active">Home</a>
+  <a href="login.php">Sign in</a>
+  <a href="register.php">Register</a>
+  <a href="profiles.php">Our Doctors</a>
+  <a href="schedule.php">View Appointments</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 
 <script>
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
