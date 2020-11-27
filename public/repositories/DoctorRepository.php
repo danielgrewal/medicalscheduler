@@ -12,6 +12,16 @@ class DoctorRepository
         $this->db = new Database();
     }
 
+    public function getDoctorsByAvailability($timeSlotId, $date)
+    {
+        $sql = "select * from doctors d where d.DoctorId not in (select a.DoctorId from appointments a inner join doctors d on d.DoctorId = a.DoctorId where a.TimeslotId = ? and a.FullDate = ?);";
+
+        $params = [$timeSlotId, $date];
+        $result = $this->db->run($sql, $params);
+        $doctorArray = $result->fetchAll(PDO::FETCH_CLASS, 'Doctor');
+        return !empty($doctorArray) ? $doctorArray : NULL;
+    }
+
     public function getDoctorByDoctorId($id)
     {
         $sql = "SELECT * FROM Doctors where DoctorId = ?";

@@ -8,14 +8,8 @@ require_once(__DIR__ . '/services/AppointmentService.php');
 $user = AuthenticationService::authenticate();
 $appointmentService = new AppointmentService();
 
-if ($_POST)
-{
-    
-}
-
-if (!isset($_GET['date']) || !isset($_GET['timeslot']))
-{
-    header( "Location: index.php", false, 303);
+if (!isset($_GET['date']) || !isset($_GET['timeslot'])) {
+    header("Location: index.php", false, 303);
     exit();
 }
 
@@ -26,6 +20,8 @@ if (isset($_GET['doctor']))
     $doctorId = htmlspecialchars($_GET['doctor'], ENT_QUOTES, 'UTF-8');
 else
     $doctorId = '';
+
+$availableDoctors = $appointmentService->getAvailableDoctors($timeslotId, '2020-11-27');
 
 var_dump($date);
 var_dump($timeslotId);
@@ -66,21 +62,30 @@ var_dump($doctorId);
             <div class="card">
                 <div class="card-body">
                     <h3 class="mt-1 mb-5">Confirmation of Booking</h3>
-                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+                    <form action="schedule.php" method="POST">
                         <div class="form-group row">
-                            <label for="patient" class="col-sm-2 col-form-label">Patient</label>
+                            <label for="user" class="col-sm-2 col-form-label">Patient</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" placeholder="<?php echo $user->FirstName . ' ' . $user->LastName; ?>" disabled>
+                                <input type="hidden" name="user" value="<?php echo $user->UserId; ?>" />
                                 <input type="hidden" name="user" value="<?php echo $user->UserId; ?>" />
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <label for="doctor-select" class="col-sm-2 col-form-label">Physician</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3">
+                                <select name="doctor" class="custom-select" id="doctor-select" required>
+                                    <option  value="" selected disabled>-- Choose Physician --</option>
+                                    <?php
+                                        foreach ($availableDoctors as $doctor)
+                                        {
+                                            echo '<option value="'.$doctor->DoctorId.'">'.$doctor->Name.'</option>';
+                                        }  
+                                    ?>
+                                </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-group row mt-5">
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary">Book Visit</button>
@@ -90,15 +95,8 @@ var_dump($doctorId);
                     </form>
                 </div>
             </div>
-
-
         </div>
     </div>
-
-
-
-
-
 
     <div class="footer">
         <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>

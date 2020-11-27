@@ -7,6 +7,13 @@ require_once(__DIR__ . '/services/AppointmentService.php');
 require_once(__DIR__ . '/entities/Appointment.php');
 
 $user = AuthenticationService::authenticate();
+
+if ($_POST)
+{
+    var_dump($_POST);
+}
+
+
 $doctor = new Doctor();
 
 ?>
@@ -113,6 +120,5 @@ $doctor = new Doctor();
         // });
         
     </script>
->>>>>>> 96053af5b6e81cf71345b5412211d6f3ab193cde
 </body>
 </html>

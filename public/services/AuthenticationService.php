@@ -24,8 +24,6 @@ class AuthenticationService
             $user->LastName = $_SESSION['LastName'];
             return $user;
         }
-
-        //TODO: implement session expiry after 30 min
     }
     
     public function getUser(string $email, string $password)

@@ -23,10 +23,12 @@ class AppointmentService
         $this->appointments = $this->getAllAppointmentsByDateRange($dateFrom, $dateTo);
     }
 
-    public function getAllDoctors()
+    public function getAvailableDoctors($timeSlotId, $strDate)
     {
-
+        $date = new DateTime($strDate);
+        return $this->doctorRepository->getDoctorsByAvailability($timeSlotId, $strDate);
     }
+
     public function isTimeslotAvailable($date, $timeslot)
     {
         
@@ -55,9 +57,6 @@ class AppointmentService
     public function getDaysInWeekByDate($strDate)
     {
         $date = date('Y-m-d', strtotime($strDate));
-
-        // if ($this->isWeekend($date))
-        //     $date = strtotime('monday next week', strtotime($date));
         
         $monday = date('Y-m-d', strtotime('monday this week', strtotime($date)));
         $friday = date('Y-m-d', strtotime('sunday this week', strtotime($date)));
