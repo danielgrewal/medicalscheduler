@@ -77,8 +77,6 @@ if ($_POST)
     </div>
 </body>
 
-
-
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -89,6 +87,5 @@ function myFunction() {
   }
 }
 </script>
-
 
 </html>

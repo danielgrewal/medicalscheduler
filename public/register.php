@@ -21,7 +21,7 @@
 
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
-			<h1><strong>Your personal <u>and</u> family's online privacy is <u>crucial</u>.</strong></h1>
+			<h1><strong><u>Protecting</u> your information is <u>paramount</u> to us.</strong></h1>
 			<p>Our online service will keep your provided information safe and secure.</p>
 		</div>
 	</div>
@@ -54,7 +54,7 @@
 	    </form>
 	</div>
 
-	    <div class="footer">
+	<div class="footer">
         <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
     </div>
 
