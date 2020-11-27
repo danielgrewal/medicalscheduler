@@ -38,11 +38,30 @@ class AppointmentRepository
         return $appointmentsArray;
     }
 
-    public function getAppointmentsByUserId($UserId)
-    {}
+    public function getAppointmentsByUser($userId)
+    {
+        $sql = "select * from Appointments where UserId = ?";
+        $params = [$userId];
+        $result = $this->db->run($sql, $params);
+        $appointmentsArray = $result->fetchAll(PDO::FETCH_CLASS, 'Appointment');
+        return !empty($appointmentsArray) ? $appointmentsArray : NULL;
+    }
 
-    public function createAppointment($userId, $doctorId, $date, $time)
-    {}
+    public function createAppointment($userId, $doctorId, $date, $timeslotId)
+    {
+        $sql = "INSERT INTO Appointments VALUES (null, ?, ?, ?, ?);";
+        $params = [$doctorId, $date, $timeslotId, $userId];
+
+        $result = $this->db->run($sql, $params);
+
+        $appointment = new Appointment();
+        $appointment->AppointmentId = $this->db->getLastInsertedId();
+        $appointment->DoctorId = $doctorId;
+        $appointment->FullDate = $date;
+        $appointment->TimeslotId = $timeslotId;
+        $appointment->UserId = $userId;
+        return $appointment;
+    }
 
     public function updateAppointment($oldAppointmentId, $userId, $doctorId, $date, $time)
     {}

@@ -23,6 +23,12 @@ class AppointmentService
         $this->appointments = $this->getAllAppointmentsByDateRange($dateFrom, $dateTo);
     }
 
+    public function createAppoinment($userId, $doctorId, $date, $timeslotId)
+    {
+        $appointment = $this->appointmentRepository->createAppointment($userId, $doctorId, $date, $timeslotId);
+        return $appointment;
+    }
+
     public function getAvailableDoctors($timeSlotId, $strDate)
     {
         $date = new DateTime($strDate);
@@ -48,9 +54,9 @@ class AppointmentService
         
         return true;
     }
+
     public function getAllTimeslots()
     {
-        
         return $this->timeslotRepository->getAllTimeslots(); 
     }
 
@@ -62,6 +68,20 @@ class AppointmentService
         $friday = date('Y-m-d', strtotime('sunday this week', strtotime($date)));
 
         return $this->getDaysInTimePeriod($monday, $friday);
+    }
+
+    public function getAppointmentsByUser($userId)
+    {
+        return $this->appointmentRepository->getAppointmentsByUser($userId);
+    }
+
+    public function isUserAppointment($appointments, $date, $timeslotId)
+    {
+        $isUsers = array_filter($appointments, function(Appointment $appointment) use($timeslotId, $date) {
+            return $appointment->TimeslotId == $timeslotId && $appointment->FullDate == $date;
+        });
+
+        return $isUsers;
     }
 
     private function getDaysInTimePeriod($dateStart, $dateEnd)
@@ -81,15 +101,11 @@ class AppointmentService
         return $dates;
     }
 
+
     private function getAllAppointmentsByDateRange($dateFrom, $dateTo)
     {
         return $this->appointmentRepository->getAppointmentsByDateRange($dateFrom, $dateTo);
     }
-
-    // private function isWeekend($date) 
-    // {
-    //     return date('N', strtotime($date)) >= 6;
-    // }
 }
 
 

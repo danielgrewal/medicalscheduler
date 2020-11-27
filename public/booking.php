@@ -67,8 +67,8 @@ var_dump($doctorId);
                             <label for="user" class="col-sm-2 col-form-label">Patient</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" placeholder="<?php echo $user->FirstName . ' ' . $user->LastName; ?>" disabled>
-                                <input type="hidden" name="user" value="<?php echo $user->UserId; ?>" />
-                                <input type="hidden" name="user" value="<?php echo $user->UserId; ?>" />
+                                <input type="hidden" name="date" value="<?php echo $date; ?>" />
+                                <input type="hidden" name="timeslot" value="<?php echo $timeslotId; ?>" />
                             </div>
                         </div>
                         <div class="form-group row">

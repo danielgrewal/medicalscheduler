@@ -7,13 +7,18 @@ require_once(__DIR__ . '/services/AppointmentService.php');
 require_once(__DIR__ . '/entities/Appointment.php');
 
 $user = AuthenticationService::authenticate();
+$appointmentService = new AppointmentService();
 
 if ($_POST)
 {
     var_dump($_POST);
+    $doctorId = $_POST['doctor'];
+    $timeslotId = $_POST['timeslot'];
+    $date = $_POST['date'];
+    $appointmentService->createAppoinment($user->UserId, $doctorId, $date, $timeslotId);
 }
 
-
+$userAppointments = $appointmentService->getAppointmentsByUser($user->UserId);
 $doctor = new Doctor();
 
 ?>
@@ -54,7 +59,7 @@ $doctor = new Doctor();
                 <div class="row">
                     <?php 
 
-                    $appointmentService = new AppointmentService();
+                    
                     $dates = $appointmentService->getDaysInWeekByDate(date('Y-m-d'));
                     foreach ($dates as $date)
                     {
@@ -68,6 +73,10 @@ $doctor = new Doctor();
                                 if ($appointmentService->isTimeslotAvailable($date, $timeslot))
                                 {
                                     echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-outline-dark btn-block">'. $timeslot->Display .'</a>';
+                                }
+                                else if ($appointmentService->isUserAppointment($userAppointments, $date, $timeslot->TimeslotId))
+                                {
+                                    echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-secondary btn-block">Booked</a>';
                                 }
                                 else
                                 {
