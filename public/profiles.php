@@ -32,11 +32,11 @@
 		<div class="card h-100">
 			<img class="card-img-top" src="assets/profile1.jpg" alt="DOCTOR PHOTO">
 		<div class="card-body">
-			<h4 class="card-title">Doctor NAME</h4>
-			<p class="card-text">Doctor INFORMATION</p>
+			<h4 class="card-title">Dr. Sarah Johnson</h4>
+			<p class="card-text">5+ years specializing in Diagnostic Medicine. Dr. Johnson has an outstanding record for accurately diagnosing patients with any disease or illness.</p>
 		</div>
 		<div class="card-footer py-4">
-			<a href="schedule.php" class="btn btn-primary btn-block">Book now &raquo;</a>
+			<a href="schedule.php" class="btn btn-primary btn-block">Book Appointment &raquo;</a>
 		</div>
 		</div>
 		</div>
@@ -44,11 +44,11 @@
         <div class="card h-100">
             <img class="card-img-top" src="assets/profile2.jpg" alt="DOCTOR PHOTO">
         <div class="card-body">
-            <h4 class="card-title">Doctor NAME</h4>
-            <p class="card-text">Doctor INFORMATION</p>
+            <h4 class="card-title">Dr. Maria Lopez</h4>
+            <p class="card-text">15+ years specializing in Family Medicine. Dr. Lopez is one of our most experienced and trusted Doctors. Dr. Lopez provides care for patients of all ages.</p>
         </div>
         <div class="card-footer py-4">
-            <a href="schedule.php" class="btn btn-primary btn-block">Book now &raquo;</a>
+            <a href="schedule.php" class="btn btn-primary btn-block">Book Appointment &raquo;</a>
         </div>
        	</div>
       	</div>
@@ -56,52 +56,51 @@
         <div class="card h-100">
             <img class="card-img-top" src="assets/profile3.jpg" alt="DOCTOR PHOTO">
         <div class="card-body">
-            <h4 class="card-title">Doctor NAME</h4>
-            <p class="card-text">Doctor INFORMATION</p>
+            <h4 class="card-title">Dr. John Dorian</h4>
+            <p class="card-text">5+ years specializing in Family Medicine. Dr. Dorian is one of our latest additions to the team. Dr. Dorian provides care for patients of all ages.</p>
         </div>
         <div class="card-footer py-4">
-            <a href="schedule.php" class="btn btn-primary btn-block">Book now &raquo;</a>
+            <a href="schedule.php" class="btn btn-primary btn-block">Book Appointment &raquo;</a>
         </div>
         </div>
       	</div>
    		</div>
 	</section>
-
 	<section id="services" class="container">
 		<div class="row text-center">
 		<div class="col-md-4 mb-4">
 		<div class="card h-100">
-			<img class="card-img-top" src="assets/profile1.jpg" alt="DOCTOR PHOTO">
+			<img class="card-img-top" src="assets/profile4.jpg" alt="DOCTOR PHOTO">
 		<div class="card-body">
-			<h4 class="card-title">Doctor NAME</h4>
-			<p class="card-text">Doctor INFORMATION</p>
+			<h4 class="card-title">Dr. Vanessa Hamilton</h4>
+			<p class="card-text">10+ years specializing in Psychiatric Medicine. Dr. Hamilton is our Director of Mental Health services, and provides care for patients of all ages.</p>
 		</div>
 		<div class="card-footer py-4">
-			<a href="schedule.php" class="btn btn-primary btn-block">Book now &raquo;</a>
+			<a href="schedule.php" class="btn btn-primary btn-block">Book Appointment &raquo;</a>
 		</div>
 		</div>
 		</div>
       	<div class="col-md-4 mb-4">
         <div class="card h-100">
-            <img class="card-img-top" src="assets/profile2.jpg" alt="DOCTOR PHOTO">
+            <img class="card-img-top" src="assets/profile5.jpg" alt="DOCTOR PHOTO">
         <div class="card-body">
-            <h4 class="card-title">Doctor NAME</h4>
-            <p class="card-text">Doctor INFORMATION</p>
+            <h4 class="card-title">Dr. Niles Crane</h4>
+            <p class="card-text">15+ years specializing in Diagnostic Medicine. Dr. Crane is our Director of Diagnostic Medicine services, and provides care primarily for adults.</p>
         </div>
         <div class="card-footer py-4">
-            <a href="schedule.php" class="btn btn-primary btn-block">Book now &raquo;</a>
+            <a href="schedule.php" class="btn btn-primary btn-block">Book Appointment &raquo;</a>
         </div>
        	</div>
       	</div>
       	<div class="col-md-4 mb-4">
         <div class="card h-100">
-            <img class="card-img-top" src="assets/profile3.jpg" alt="DOCTOR PHOTO">
+            <img class="card-img-top" src="assets/profile6.jpg" alt="DOCTOR PHOTO">
         <div class="card-body">
-            <h4 class="card-title">Doctor NAME</h4>
-            <p class="card-text">Doctor INFORMATION</p>
+            <h4 class="card-title">Dr. Frasier Smith</h4>
+            <p class="card-text">5+ years specializing in Psychiatric Medicine. Dr. Smith is our newest team member. Dr. Smith provides care primarily for children and young adults.</p>
         </div>
         <div class="card-footer py-4">
-            <a href="schedule.php" class="btn btn-primary btn-block">Book now &raquo;</a>
+            <a href="schedule.php" class="btn btn-primary btn-block">Book Appointment &raquo;</a>
         </div>
         </div>
       	</div>
