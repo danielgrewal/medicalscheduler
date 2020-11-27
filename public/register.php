@@ -46,6 +46,11 @@
 			<input type="submit" class="btn btn-primary btn-block" value="Register">
 	    </form>
 	</div>
+
+	    <div class="footer">
+        <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
+    </div>
+    
 </body>
 
 <script>

@@ -18,19 +18,14 @@
 	  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     	<i class="fa fa-bars"></i></a>
 	</div>
+
 	<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1><strong>Your Health and Well-Being Matters.</strong></h1>
-    <p>We are committed to providing the best health care for you and your family.</p>
-  </div>
-</div>
-<!--
-	<header class="jumbotron">
-    <div class="container-fluid text-center"> 
-       <h1 class="display-3"><strong>Your Health and Well-Being Matters.</strong></h1>
-       <p class="lead pb-4"><strong>We are committed to providing the best health care for you and your family.</strong></p>
-    </div>
-	</header>-->
+  		<div class="container">
+    		<h1><strong>Your Health <u>and</u> Well-being matters <u>most</u>.</strong></h1>
+    		<p>We are committed to providing the best health care for you and your family.</p>
+  		</div>
+	</div>
+
 <section id="services" class="container">
    <h2 class="display-4 text-center mt-5 mb-3"></h2>
    <div class="row text-center">
@@ -74,6 +69,10 @@
       </div>
    </div>
 </section>
+
+    <div class="footer">
+        <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
+    </div>
 
 </body>
 

@@ -1,8 +1,13 @@
 body {
 	background-color: #E0E7FF;
 }
-h1, p {
+h1 {
     text-align: center;
+    font-size: 32pt;
+}
+p {
+    text-align: center;
+    font-size: 12pt;
 }
 .login-form {
     width: 340px;
@@ -88,4 +93,21 @@ h1, p {
     display: block;
     text-align: left;
   }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #312E81;
+    color: white;
+    text-align: center;
+    height: 30px;
+    padding: 5px 5px;
+}
+
+.footer_text {
+    text-align: center;
+    font-size: 9pt;
 }

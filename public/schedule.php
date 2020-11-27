@@ -20,6 +20,11 @@
   </a>
 </div>
 	<h1>HERE IS WHERE THE SCHEDULE WILL BE ETC ETC</h1>
+
+	    <div class="footer">
+        <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
+    </div>
+    
 </body>
 
 <script>

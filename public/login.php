@@ -37,15 +37,22 @@ if ($_POST)
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-  <a href="index.php">Home</a>
-  <a href="login.php" class="active">Sign in</a>
-  <a href="register.php">Register</a>
-  <a href="profiles.php">Our Doctors</a>
-  <a href="schedule.php">View Appointments</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+        <a href="index.php">Home</a>
+        <a href="login.php" class="active">Sign in</a>
+        <a href="register.php">Register</a>
+        <a href="profiles.php">Our Doctors</a>
+        <a href="schedule.php">View Appointments</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i></a>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1><strong>We are always here to care for you.</strong></h1>
+            <p>24/7 Online access for patients that register. Easily book and manage your appointments after signing in.</p>
+        </div>
+    </div>
+
     <div class="login-form">
         <form id="login-form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
             <h2 class="text-center">Welcome Back!</h2>
@@ -64,7 +71,13 @@ if ($_POST)
             <?php echo isset($errors['form']) ? $errors['form'] : null ?>
         </form>
     </div>
+
+    <div class="footer">
+        <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
+    </div>
 </body>
+
+
 
 <script>
 function myFunction() {
@@ -76,5 +89,6 @@ function myFunction() {
   }
 }
 </script>
+
 
 </html>
