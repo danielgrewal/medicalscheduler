@@ -73,11 +73,12 @@ insert into specialties values (null, 'Diagnostic Medicine', 'Placeholder Diagno
 insert into specialties values (null, 'Family Medicine', 'Placeholder Family Medicine description');
 insert into specialties values (null, 'Psychiatric Medicine', 'Placeholder Psychiatric Medicine description');
 
-insert into doctors values (null, 'Dr.Gregory House', 1);
-insert into doctors values (null, 'Dr.Perry Cox', 2);
+insert into doctors values (null, 'Dr.Sarah Johnson', 1);
+insert into doctors values (null, 'Dr.Maria Lopez', 2);
 insert into doctors values (null, 'Dr.John J.D. Dorian', 2);
-insert into doctors values (null, 'Dr.Frasier Crane', 3);
-insert into doctors values (null, 'Dr.Niles Crane', 3);
+insert into doctors values (null, 'Dr.Vanessa Hamilton', 3);
+insert into doctors values (null, 'Dr.Niles Crane', 1);
+insert into doctors values (null, 'Dr.Frasier Smith', 3);
 
 #insert into appointments values (null, 3, '2020-11-27', 15, 1);
 #insert into appointments values (null, 3, '2020-11-27', 11, 2);
