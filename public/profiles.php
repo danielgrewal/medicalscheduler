@@ -1,3 +1,35 @@
+<?php
+session_start();
+
+require_once(__DIR__ . '/services/AuthenticationService.php');
+
+if ($_POST)
+{
+    $authService = new AuthenticationService();
+    $user = $authService->getUser($_POST['email'], $_POST['password']);
+    if ($user)
+    {
+      echo '<script type="text/javascript">';
+      echo 'alert("")';
+      echo '</script>';
+    }
+    else
+    {
+        $errors = $authService->getErrors();
+    }
+
+    # Post->Redirect->Get pattern to avoid form re-submission
+    // header( "Location: { $_SERVER['REQUEST_URI'] }", true, 303 );
+    // exit();
+}
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
