@@ -75,14 +75,14 @@ $doctor = new Doctor();
                             {
                                 if ($appointmentService->isTimeslotAvailable($date, $timeslot))
                                 {
-                                    //echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-outline-dark btn-block">'. $timeslot->Display .'</a>';
                                     echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-outline-dark btn-block">'. $timeslot->Display .'</a>';
+                                    
                                     
                                 }
                                 else if ($appointmentService->isUserAppointment($userAppointments, $date, $timeslot->TimeslotId))
                                 {
-                                    //echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-secondary btn-block">Booked</a>';
-                                    echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'" class="btn btn-secondary btn-block">Booked</a>';
+                                    echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-secondary btn-block">Booked</a>';
+                                    
                                 }
                                 else
                                 {
