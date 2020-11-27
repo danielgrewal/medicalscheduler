@@ -21,12 +21,7 @@ if (isset($_GET['doctor']))
 else
     $doctorId = '';
 
-$availableDoctors = $appointmentService->getAvailableDoctors($timeslotId, '2020-11-27');
-
-var_dump($date);
-var_dump($timeslotId);
-var_dump($doctorId);
-
+$availableDoctors = $appointmentService->getAvailableDoctors($timeslotId, date('Y-m-d'));
 ?>
 
 <!DOCTYPE html>

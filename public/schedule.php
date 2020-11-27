@@ -11,11 +11,14 @@ $appointmentService = new AppointmentService();
 
 if ($_POST)
 {
-    var_dump($_POST);
     $doctorId = $_POST['doctor'];
     $timeslotId = $_POST['timeslot'];
     $date = $_POST['date'];
     $appointmentService->createAppoinment($user->UserId, $doctorId, $date, $timeslotId);
+    
+    # Post->Redirect->Get pattern to avoid form re-submission
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
 }
 
 $userAppointments = $appointmentService->getAppointmentsByUser($user->UserId);
@@ -72,11 +75,14 @@ $doctor = new Doctor();
                             {
                                 if ($appointmentService->isTimeslotAvailable($date, $timeslot))
                                 {
+                                    //echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-outline-dark btn-block">'. $timeslot->Display .'</a>';
                                     echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-outline-dark btn-block">'. $timeslot->Display .'</a>';
+                                    
                                 }
                                 else if ($appointmentService->isUserAppointment($userAppointments, $date, $timeslot->TimeslotId))
                                 {
-                                    echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-secondary btn-block">Booked</a>';
+                                    //echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'&doctor='.$doctor->DoctorId.'" class="btn btn-secondary btn-block">Booked</a>';
+                                    echo '<a href="booking.php?date='.$date.'&timeslot='.$timeslot->TimeslotId.'" class="btn btn-secondary btn-block">Booked</a>';
                                 }
                                 else
                                 {
