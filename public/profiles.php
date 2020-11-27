@@ -10,28 +10,73 @@
 </head>
 <body>
 	<div class="topnav" id="myTopnav">
-  <a href="index.php">Home</a>
-  <a href="login.php">Sign in</a>
-  <a href="register.php">Register</a>
-  <a href="profiles.php" class="active">Our Doctors</a>
-  <a href="schedule.php">View Appointments</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i></a>
-</div>
+  		<a href="index.php">Home</a>
+  		<a href="login.php">Sign in</a>
+  		<a href="register.php">Register</a>
+  		<a href="profiles.php" class="active">Our Doctors</a>
+  		<a href="schedule.php">View Appointments</a>
+  		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    	<i class="fa fa-bars"></i></a>
+	</div>
+
   	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
-			<h1><strong>Providing <u>quality</u> care is our <u>main</u> concern.</strong></h1>
+			<h1><strong>Providing quality <u>care</u> is our main <u>concern</u>.</strong></h1>
 			<p>We have only the best doctors and medical professionals at our clinics.</p>
 		</div>
 	</div>
 
+	<section id="services" class="container">
+		<div class="row text-center">
+		<div class="col-md-4 mb-4">
+		<div class="card h-100">
+		<img class="card-img-top" src="assets/doctor1.png" alt="DOCTOR PHOTO">
+		<div class="card-body">
+		<h4 class="card-title">Quality Care</h4>
+		<p class="card-text">Our doctors and health care professionals pride themselves in providing the best care. All of our staff and medical personnel are highly qualified and experienced.</p>
+		</div>
+		<div class="card-footer py-4">
+		<a href="profiles.php" class="btn btn-primary btn-block">View Doctors &raquo;</a>
+		</div>
+		</div>
+	</div>
+      
+      <div class="col-md-4 mb-4">
+         <div class="card h-100">
+            <img class="card-img-top" src="assets/doctor2.png" alt="DOCTOR PHOTO">
+            <div class="card-body">
+               <h4 class="card-title">New Patients Welcome!</h4>
+                  <p class="card-text">We are accepting patients for all of our doctors. If you have not already registered, please follow the link below. If you are an existing patient, click here to login.</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="register.php" class="btn btn-primary btn-block">Register now &raquo;</a>
+            </div>
+         </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+         <div class="card h-100">
+            <img class="card-img-top" src="assets/doctor3.png" alt="DOCTOR PHOTO">
+            <div class="card-body">
+               <h4 class="card-title">Self Serve</h4>
+               <p class="card-text">Do you need to reschedule or cancel an appointment? Registered patients can easily manage their appointments using our website.</p>
+            </div>
+            <div class="card-footer py-4">
+               <a href="login.php" class="btn btn-primary btn-block">Sign in &raquo;</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 
 
-	<h1>PUT DOCTOR INFO HERE AND BLAH BLAH </h1>
 
 
-	    <div class="footer">
-        <p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
+
+
+
+	<div class="footer">
+    	<p class="footer_text">Copyright © SOFE2800 Final Project Group 3 - Fall 2020 @ Ontario Tech University</p>
     </div>
 </body>
 

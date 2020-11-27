@@ -21,13 +21,12 @@
 
 	<div class="jumbotron jumbotron-fluid">
   		<div class="container">
-    		<h1><strong>Your Health <u>and</u> Well-being matters <u>most</u>.</strong></h1>
+    		<h1><strong>Your <u>health</u> and well-being matters <u>most</u>.</strong></h1>
     		<p>We are committed to providing the best health care for you and your family.</p>
   		</div>
 	</div>
 
 <section id="services" class="container">
-   <h2 class="display-4 text-center mt-5 mb-3"></h2>
    <div class="row text-center">
       <div class="col-md-4 mb-4">
          <div class="card h-100">
@@ -46,7 +45,7 @@
          <div class="card h-100">
             <img class="card-img-top" src="assets/doctor2.png" alt="DOCTOR PHOTO">
             <div class="card-body">
-               <h4 class="card-title">New Patients Welcome!</h4>
+               <h4 class="card-title">New Patients Welcome</h4>
                   <p class="card-text">We are accepting patients for all of our doctors. If you have not already registered, please follow the link below. If you are an existing patient, click here to login.</p>
             </div>
             <div class="card-footer py-4">
@@ -59,8 +58,8 @@
          <div class="card h-100">
             <img class="card-img-top" src="assets/doctor3.png" alt="DOCTOR PHOTO">
             <div class="card-body">
-               <h4 class="card-title">Self Serve</h4>
-               <p class="card-text">Do you need to reschedule or cancel an appointment? Registered patients can easily manage their appointments using our website.</p>
+               <h4 class="card-title">Self-Serve</h4>
+               <p class="card-text">Do you need to reschedule or cancel an appointment? Registered patients can easily manage their appointments using our convenient online portal.</p>
             </div>
             <div class="card-footer py-4">
                <a href="login.php" class="btn btn-primary btn-block">Sign in &raquo;</a>
