@@ -15,7 +15,6 @@
   		<a href="register.php">Register</a>
   		<a href="profiles.php" class="active">Our Doctors</a>
   		<a href="schedule.php">View Appointments</a>
-      <a href="logout.php" class="float-right">Sign Out</a>
   		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     	<i class="fa fa-bars"></i></a>
 	</div>
