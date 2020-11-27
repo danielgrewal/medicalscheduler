@@ -12,7 +12,7 @@
 	<div class="topnav" id="myTopnav">
   		<a href="index.php">Home</a>
   		<a href="login.php">Sign in</a>
-  		<a href="register.php">Register</a>
+  		<a href="register.php">Register</a>r
   		<a href="profiles.php" class="active">Our Doctors</a>
   		<a href="schedule.php">View Appointments</a>
   		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
