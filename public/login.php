@@ -10,7 +10,7 @@ if ($_POST)
     if ($user)
     {
         $authService->populateSession($user);
-        header( "Location: index.php", false, 303);
+        header( "Location: schedule.php", false, 303);
         exit();
     }
     else

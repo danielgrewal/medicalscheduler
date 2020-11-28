@@ -79,7 +79,3 @@ insert into doctors values (null, 'Dr.John J.D. Dorian', 2);
 insert into doctors values (null, 'Dr.Vanessa Hamilton', 3);
 insert into doctors values (null, 'Dr.Niles Crane', 1);
 insert into doctors values (null, 'Dr.Frasier Smith', 3);
-
-insert into appointments values (null, 3, '2020-11-28', 15, 1);
-insert into appointments values (null, 3, '2020-11-28', 11, 2);
-insert into appointments values (null, 1, '2020-11-28', 11, 2);
