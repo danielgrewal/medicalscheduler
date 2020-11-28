@@ -77,6 +77,9 @@ class AppointmentService
 
     public function isUserAppointment($appointments, $date, $timeslotId)
     {
+        if ($appointments == null)
+            $appointments = array();
+
         $isUsers = array_filter($appointments, function(Appointment $appointment) use($timeslotId, $date) {
             return $appointment->TimeslotId == $timeslotId && $appointment->FullDate == $date;
         });
