@@ -27,11 +27,8 @@
 	</div>
 
 	<div class="login-form">
-<<<<<<< HEAD
 		<form id="login-form" action="schedule.php" method="POST">
-=======
 		<form id="login-form" action="validate.php" method="POST">
->>>>>>> main
 			<h2 class="text-center">Welcome!</h2>
 			<p>You must register before booking an appointment. If you have already registered, <a href="login.php">click here</a> to login.</p>
 			<div class="form-group">
